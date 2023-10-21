@@ -43,7 +43,8 @@ class SignInFragment : Fragment() {
                 val intentToInResultActivity = Intent(requireContext(), InResultActivity::class.java)
                 intentToInResultActivity.putExtra(EXTRA_USERNAME, enteredUsername)
                 startActivity(intentToInResultActivity)
-            } else {
+            }
+            else {
                 // Pesan kesalahan jika login gagal
                 val errorMessage = "Login failed. Invalid username or password."
                 Toast.makeText(requireContext(), errorMessage, Toast.LENGTH_SHORT).show()

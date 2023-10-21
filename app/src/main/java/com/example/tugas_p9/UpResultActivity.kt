@@ -19,7 +19,5 @@ class UpResultActivity : AppCompatActivity() {
         val welcomeMessage = "Welcome, $firstName $lastName!"
         binding.txtWelcomeMessage.text = welcomeMessage
 
-        // Handle other UI elements or logic as needed
-        // For example, you can set click listeners or perform additional actions.
     }
 }

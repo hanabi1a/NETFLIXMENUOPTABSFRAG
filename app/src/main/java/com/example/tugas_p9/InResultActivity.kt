@@ -17,6 +17,5 @@ class InResultActivity : AppCompatActivity() {
         val username = intent.getStringExtra(SignInFragment.EXTRA_USERNAME)
         binding.txtWelcomeMessage.text = "Welcome, $username!"
 
-        // Tambahkan logika atau operasi lain yang diperlukan di sini
     }
 }
