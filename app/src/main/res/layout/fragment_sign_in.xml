@@ -1,14 +1,157 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/bgloginpage"
     tools:context=".SignInFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_height="match_parent">
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- Logo Aplikasi -->
+            <ImageView
+                android:id="@+id/applogo"
+                android:layout_width="wrap_content"
+                android:layout_height="140dp"
+                android:src="@drawable/netflixlogo1"
+                android:layout_gravity="center"
+                android:layout_marginTop="40dp"/>
+
+            <!-- TextInputEditText untuk Username -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/usernameTextInputLayout"
+                android:layout_width="330dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/usernameEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Username"
+                    android:background="@color/white"
+                    android:inputType="text"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- TextInputEditText untuk Password -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/passwordTextInputLayout"
+                android:layout_width="330dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                app:endIconMode="password_toggle">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/passwordEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Password"
+                    android:background="@color/white"
+                    android:inputType="textPassword"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- Remember and Help -->
+            <LinearLayout
+                android:id="@+id/rehelp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="7dp">
+
+                <!-- CheckBox -->
+                <CheckBox
+                    android:id="@+id/rememberCheckBox"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30dp"
+                    android:textColor="@color/white"
+                    android:buttonTint="@color/white"
+                    android:text="Always Remember."/>
+
+                <!-- Teks Help -->
+                <TextView
+                    android:id="@+id/forgothelp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="52dp"
+                    android:textColor="@color/white"
+                    android:text="@string/forgot"/>
+            </LinearLayout>
+
+            <!-- Button Signin -->
+            <Button
+                android:id="@+id/loginButton"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="10dp"
+                android:backgroundTint="#FF0000"
+                android:text="Sign In"/>
+
+            <!-- connect with text-->
+            <TextView
+                android:id="@+id/connecttext"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="25dp"
+                android:textColor="@color/white"
+                android:text="@string/connecttxt"/>
+
+            <!-- Connect With -->
+            <LinearLayout
+                android:id="@+id/connectwith"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_gravity="center"
+                android:layout_marginTop="12dp">
+
+                <!-- Logo Google -->
+                <ImageView
+                    android:id="@+id/googlelogo"
+                    android:layout_width="30dp"
+                    android:layout_height="50dp"
+                    android:src="@drawable/google1"/>
+
+                <!-- Logo Apple -->
+                <ImageView
+                    android:id="@+id/applelogo"
+                    android:layout_width="32dp"
+                    android:layout_height="51dp"
+                    android:layout_marginLeft="10dp"
+                    android:src="@drawable/applelogo1"/>
+
+                <!-- Logo Facebook -->
+                <ImageView
+                    android:id="@+id/facebooklogo"
+                    android:layout_width="32dp"
+                    android:layout_height="51dp"
+                    android:layout_marginLeft="10dp"
+                    android:src="@drawable/facebook"/>
+            </LinearLayout>
+
+            <!-- Sign Up -->
+            <TextView
+                android:id="@+id/signUpTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="25dp"
+                android:layout_marginBottom="80dp"
+                android:textColor="@color/white"
+                android:text="@string/signin"/>
+
+        </LinearLayout>
+    </ScrollView>
 </FrameLayout>

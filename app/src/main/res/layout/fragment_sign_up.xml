@@ -1,14 +1,177 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/bgloginpage"
     tools:context=".SignUpFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_height="match_parent">
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- Logo Aplikasi -->
+            <ImageView
+                android:id="@+id/applogo"
+                android:layout_width="wrap_content"
+                android:layout_height="140dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="40dp"
+                android:layout_marginBottom="10dp"
+                android:src="@drawable/netflixlogo1" />
+
+            <!-- TextInputEditText untuk First Name -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/firstnameTextInputLayout"
+                android:layout_width="330dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="10dp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/firstnameEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:hint="First Name"
+                    android:inputType="text" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- TextInputEditText untuk Last Name -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/lastnameTextInputLayout"
+                android:layout_width="330dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="10dp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/lastnameEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:hint="Last Name"
+                    android:inputType="text" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- TextInputEditText untuk Phone Number -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/phonenumberTextInputLayout"
+                android:layout_width="330dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="10dp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/phonenumberEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:hint="Phone Number"
+                    android:inputType="text" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- TextInputEditText untuk Password -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/passwordTextInputLayout"
+                android:layout_width="330dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                app:endIconMode="password_toggle">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/passwordEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:hint="Password"
+                    android:inputType="textPassword" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- Terms and Privacy Policy Agreement CheckBox -->
+            <CheckBox
+                android:id="@+id/rememberCheckBox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="7dp"
+                android:layout_marginLeft="30dp"
+                android:buttonTint="@color/white"
+                android:text="I agree to the Terms and Privacy Policy."
+                android:textColor="@color/white" />
+
+            <!-- Button SignUp -->
+            <Button
+                android:id="@+id/signupButton"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="25dp"
+                android:layout_marginBottom="10dp"
+                android:backgroundTint="#FF0000"
+                android:text="Sign Up" />
+
+            <!-- join with text-->
+            <TextView
+                android:id="@+id/jointext"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:text="@string/connecttxt"
+                android:textColor="@color/white" />
+
+            <!-- Connect With -->
+            <LinearLayout
+                android:id="@+id/connectwith"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="12dp"
+                android:orientation="horizontal">
+
+                <!-- Logo Google -->
+                <ImageView
+                    android:id="@+id/googlelogo"
+                    android:layout_width="30dp"
+                    android:layout_height="50dp"
+                    android:src="@drawable/google1" />
+
+                <!-- Logo Apple -->
+                <ImageView
+                    android:id="@+id/applelogo"
+                    android:layout_width="32dp"
+                    android:layout_height="51dp"
+                    android:layout_marginLeft="10dp"
+                    android:src="@drawable/applelogo1" />
+
+                <!-- Logo Facebook -->
+                <ImageView
+                    android:id="@+id/facebooklogo"
+                    android:layout_width="32dp"
+                    android:layout_height="51dp"
+                    android:layout_marginLeft="10dp"
+                    android:src="@drawable/facebook" />
+            </LinearLayout>
+
+            <!-- Sign In -->
+            <TextView
+                android:id="@+id/signInTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="80dp"
+                android:text="Already have an account? Sign In."
+                android:textColor="@color/white" />
+
+        </LinearLayout>
+    </ScrollView>
 </FrameLayout>
